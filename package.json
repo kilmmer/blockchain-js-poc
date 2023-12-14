@@ -1,0 +1,15 @@
+{
+    "author": {
+        "email": "kilmmer@icloud.com",
+        "name": "Kilmmer Kielblock"
+    },
+    "scripts": {
+        "start": "node index.js",
+        "dev": "nodemon index.js",
+        "test": "mocha"
+    },
+    "dependencies": {
+        "mocha": "^10.2.0"
+    },
+    "type": "module"
+}
