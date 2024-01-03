@@ -1,4 +1,4 @@
-import { Chain } from "./chain.js";
+import { Chain } from "./src/index.js";
 
 class Main {
     chains = []

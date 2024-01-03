@@ -1,7 +1,7 @@
 import { describe, it, before } from "mocha";
 import assert from 'assert'
-import { Chain } from "../chain.js";
-import { Block } from "../block.js";
+import { Chain } from "../src/chain.js";
+
 
 describe("Test case - Chain", () => {
     let chain = null
@@ -12,15 +12,14 @@ describe("Test case - Chain", () => {
 
     it('should create a new chain', () => {
         assert.notEqual(chain, null, 'new chain created ok.')
-        console.log(chain)
     })
 
     it("should list blocks", () => {
-        console.log(chain.getBlockchain())
+        assert.notEqual(chain.getBlockchain(), null)
     })
 
     it('get blocks of chain', () => {
-        assert.equal(chain.getBlockchain(), 0, 'chain is empty')
+        assert.notEqual(chain.getBlockchain(), 0, 'chain is empty')
     })
 
     it("should add block to the chain", () => {
@@ -30,7 +29,6 @@ describe("Test case - Chain", () => {
     })
 
     it("should list blocks", () => {
-        console.log(chain.getBlockchain())
+        chain.getBlockchain()
     })
-   
 })

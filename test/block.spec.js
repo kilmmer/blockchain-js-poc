@@ -1,14 +1,14 @@
 import { describe, beforeEach } from "mocha";
 import assert from 'assert'
-import { Block } from "../block.js";
+import { Block } from "../src/block.js";
 
-describe("Test case - Block", function(){
+describe("Test case - Block", function () {
     let block = null
     before(() => {
         block = new Block()
     })
-    
-    it("create new block empty", function(){
+
+    it("create new block empty", function () {
         assert.notEqual(block, null)
     })
 
@@ -17,13 +17,12 @@ describe("Test case - Block", function(){
     })
 
     it("create new block content", () => {
-        block.setData('conteúdo do bloco')
-
-        console.log(block.getData())
-    } )
+        block.setData('conteúdo do bloco: ' + new Date().getTime())
+        assert.equal(block.getData(), 'conteúdo do bloco: ' + new Date().getTime())
+    })
 
     it("check block", () => {
-        console.log(block.getBlock())
+        assert.notEqual(block.getBlock(), null)
     })
 
 
